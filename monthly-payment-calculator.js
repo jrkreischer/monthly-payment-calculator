@@ -57,7 +57,7 @@ var monthlyPaymentCalculator = (function() {
 
       // Loop text inputs, compare with regex, update status(good)
       for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].value.match(re) || inputs[i].value.match(reDecPercent)) {
+        if (inputs[i].value.match(re) || inputs[i].value.match(reDecPercent) && inputs[i].value != '') {
           good++;
           if (inputs[i].style.borderColor == 'red') {
             inputs[i].style.borderColor = 'initial';

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lange="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Monthly Payment Calculator</title>
+  </head>
+  <body>
+
+    <div id="calculator">
+      <label># of Payments:</label><br>
+      <input type="text" id="num-payments" value=""><br>
+      <label>Interest Rate:</label><br>
+      <input type="text" id="interest-rate" value=""><br>
+      <label>Loan Amount:</label><br>
+      <input type="text" id="loan-amount" value=""><br>
+
+      <p id="error">&nbsp;</p>
+
+      <p><button type="submit" id="calculate">Calculate</button></p>
+    </div><!-- #calculator -->
+
+    <hr>
+
+    <h3>Results:</h3>
+
+    <div id="outputs">
+      <label>Monthly Payment:</label><br>
+      <span id="monthly-payment"></span><br>
+    </div><!-- #outputs -->
+
+    <script src="mortgage-calculator.js"></script>
+
+  </body>
+</html>

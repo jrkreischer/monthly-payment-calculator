@@ -1,14 +1,14 @@
 
 var monthlyPaymentCalculator = (function() {
   // Inputs
-  var calculator = document.getElementById('calculator');
-  var numPayments = document.getElementById('num-payments');
-  var interestRate = document.getElementById('interest-rate');
-  var loanAmount = document.getElementById('loan-amount');
-  var calculate = document.getElementById('calculate');
+  var calculator = document.getElementById('monthly-payment-calculator');
+  var numPayments = document.querySelector('#monthly-payment-calculator #num-payments');
+  var interestRate = document.querySelector('#monthly-payment-calculator #interest-rate');
+  var loanAmount = document.querySelector('#monthly-payment-calculator #loan-amount');
+  var calculate = document.querySelector('#monthly-payment-calculator #calculate');
   // Outputs
-  var error = document.getElementById('error');
-  var monthlyPayment = document.getElementById('monthly-payment');
+  var error = document.querySelector('#monthly-payment-calculator #error');
+  var monthlyPayment = document.querySelector('#monthly-payment-calculator #monthly-payment');
   // Vars for calculation
   var n, i, p;
 
@@ -53,7 +53,7 @@ var monthlyPaymentCalculator = (function() {
       var re = /^\d+(?:\.\d{1,2})?$/; // Regex to check for valid number
       var reDecPercent = /^(\.\d{1,2})?$/; // Regex for decimal percentage
       var good = 0; // Counter for validated inputs
-      var inputs = document.querySelectorAll('#calculator input[type=text]');
+      var inputs = document.querySelectorAll('#monthly-payment-calculator input[type=text]');
 
       // Loop text inputs, compare with regex, update status(good)
       for (var i = 0; i < inputs.length; i++) {
@@ -61,6 +61,7 @@ var monthlyPaymentCalculator = (function() {
           good++;
           if (inputs[i].style.borderColor == 'red') {
             inputs[i].style.borderColor = 'initial';
+            error.innerHTML = '&nbsp;';
           }
         } else {
           good--;

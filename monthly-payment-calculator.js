@@ -51,7 +51,7 @@ var monthlyPaymentCalculator = (function() {
 
     var validateInputs = (function() {
       var re = /^\d+(?:\.\d{1,2})?$/; // Regex to check for valid number
-      var reDecPercent = /^(\.\d{1,2})?$/; // Regex for decimal percentage
+      var reDecPercent = /^(\.\d{1,4})?$/; // Regex for decimal percentage
       var good = 0; // Counter for validated inputs
       var inputs = document.querySelectorAll('#monthly-payment-calculator input[type=text]');
 

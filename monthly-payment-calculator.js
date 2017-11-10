@@ -59,13 +59,13 @@ var monthlyPaymentCalculator = (function() {
       for (var i = 0; i < inputs.length; i++) {
         if (inputs[i].value.match(re) || inputs[i].value.match(reDecPercent) && inputs[i].value != '') {
           good++;
-          if (inputs[i].style.borderColor == 'red') {
-            inputs[i].style.borderColor = 'initial';
+          if (inputs[i].classList.contains('error')) {
+            inputs[i].classList.remove('error');
             error.innerHTML = '&nbsp;';
           }
         } else {
           good--;
-          inputs[i].style.borderColor = 'red';
+          inputs[i].classList.add('error');
         }
       }
 
